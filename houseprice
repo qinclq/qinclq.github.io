@@ -1,0 +1,11 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+data = pd.read_csv("D://kaggle//adata//train.csv")
+data.info()
+data.describe()
+
+fig, ax = plt.subplots()
+ax.scatter(x = data['GrLivArea'], y=data['SalePrice'])
+plt.xlabel('GrLivArea', fontsize = 13)
+plt.ylabel('SalePrice', fontsize = 13)
+plt.show()
